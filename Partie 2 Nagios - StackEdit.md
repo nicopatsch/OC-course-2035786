@@ -1030,11 +1030,11 @@ nagios@NagiosDebian:~$ cat /usr/local/nagios/etc/nagios.cfg | grep -e ^[^#] | wc
 
 Bien, il ne reste « plus que 109 » lignes, soient 109 directives. Evidemment ce serait beaucoup trop long pour expliquer toutes ses directives, mais je vais vous présenter les plus importantes.
 
-- **log_file**
+##### log_file
 
 Vous connaissez désormais cette directive qui indique à Nagios le chemin vers son fichier de trace. Il est possible de changer le chemin par défaut à condition que le compte `nagios` ait les droits d’écriture.
 
-- **cfg_file**
+##### cfg_file
 
 Cette directive permet d’indiquer à Nagios de manière spécifique le chemin vers un fichier de configuration à prendre en compte au démarrage.
 
@@ -1054,7 +1054,7 @@ cfg_file=/usr/local/nagios/etc/objects/templates.cfg
 cfg_file=/usr/local/nagios/etc/objects/localhost.cfg
 ````
 
-- **cfg_dir**
+##### cfg_dir
 
 Cette directive a le même objectif que **cfg_file**, mais plutôt que de référencer les fichiers de manière individuelle, **cfg_dir** va référencer tous les fichiers avec une extension **.cfg** contenu dans le chemin fournit en paramètre, de manière récursive (en y incluant tous les répertoires et sous répertoires).
 
@@ -1067,7 +1067,7 @@ nagios@NagiosDebian:~$ mkdir /usr/local/nagios/opencr_conf
 ````
 
 Il vous reste maintenant à référencer ce répertoire dans le fichier de configuration Nagios, avec les commandes suivantes par exemple 
->**ATTENTION à bien indiquer DEUX chevrons pour AJOUTER ces lignes en fin de fichier** : 
+>**:warnin à bien indiquer DEUX chevrons pour AJOUTER ces lignes en fin de fichier** : 
 
 ````shell
 nagios@NagiosDebian:/usr/local$ echo "#CONFIG OPENCLASSROOMS" >> /usr/local/nagios/etc/nagios.cfg 
@@ -1967,6 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTEzMTc4Mjg2MjUsLTEwMDM1MzM5MTYsODM4NTU3
+N0b3J5IjpbLTE0Mzg1MjYzMDYsLTEwMDM1MzM5MTYsODM4NTU3
 Mjg1LDEwODcxMzgwNjddfQ==
 -->
