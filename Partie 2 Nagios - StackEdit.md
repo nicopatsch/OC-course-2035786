@@ -509,9 +509,6 @@ Aïe ! Effectivement, Nagios relève déjà quelques soucis. Mais en observant u
 **[SCREENSHOT : 2.1-12_NoSuchFileOrDirectory ]**
 
 >Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios. Car, vous venez ici de compléter uniquement la première étape de l'installation de la solution Nagios Core, c'est à dire, la préparation de son serveur d'hébergement, la compilation de ses sources, la création de son arborescence et la configuration de son interface d'administration Web. La seconde étape consiste justement à compiler et installer ces plugins. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
-
-
-
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJNSnhMdGtBV0E4N1UyckMyIjp7In
 RleHQiOiJgbmFnaW9zYCIsInN0YXJ0IjoyNzg1NSwiZW5kIjoy
@@ -630,7 +627,7 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTczNTcxODEwOCw0NDU2MTUyMzAsLTk2NDEwMDYw
+N0b3J5IjpbMTY5ODAxMzMzOCw0NDU2MTUyMzAsLTk2NDEwMDYw
 MSwxMzQwMDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NSwxMD
 g3MTM4MDY3XX0=
 -->
