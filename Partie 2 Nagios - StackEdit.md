@@ -713,7 +713,7 @@ Total Warnings: 0
 Total Errors:   0
 ````
 
-Lorsque vous allez configurer des sondes Nagios, vous le ferez sous le compte utilisateur `nagios`, c’est toujours mieux de ne pas travailler directement sous le compte root si ce n’est pas nécessaire.
+Lorsque vous allez configurer des sondes Nagios, vous le ferez sous le compte utilisateur `nagios`, c’est toujours mieux de ne pas travailler directement sous le compte `root` si ce n’est pas nécessaire.
 
 Je vous propose donc de créer un raccourcis de cette commande, que vous allez nommer « `testNagios` » dans le fichier de configuration du shell interactif (sans login) de l’utilisateur `nagios` (en effet, le service Nagios tourne de manière indépendante et ne nécessite heureusement aucune connexion réelle du compte `nagios`). Pour créer cet alias, exécutez la commande suivante : 
 
@@ -1967,5 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbODM4NTU3Mjg1LDEwODcxMzgwNjddfQ==
+N0b3J5IjpbMzgxODE4OTEzLDgzODU1NzI4NSwxMDg3MTM4MDY3
+XX0=
 -->
