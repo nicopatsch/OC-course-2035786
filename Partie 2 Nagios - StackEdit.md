@@ -1067,7 +1067,7 @@ nagios@NagiosDebian:~$ mkdir /usr/local/nagios/opencr_conf
 ````
 
 Il vous reste maintenant à référencer ce répertoire dans le fichier de configuration Nagios, avec les commandes suivantes par exemple 
->**:warnin à bien indiquer DEUX chevrons pour AJOUTER ces lignes en fin de fichier** : 
+>**:warning:** Attention à bien indiquer DEUX chevrons pour AJOUTER ces lignes en fin de fichier** : 
 
 ````shell
 nagios@NagiosDebian:/usr/local$ echo "#CONFIG OPENCLASSROOMS" >> /usr/local/nagios/etc/nagios.cfg 
@@ -1085,7 +1085,7 @@ nagios@NagiosDebian:/usr/local$ tail /usr/local/nagios/etc/nagios.cfg
 cfg_dir=/usr/local/nagios/opencr_conf
 ````
 
-- **status_file** et **status_update**
+##### status_file et status_update
 
 Ces deux directives indiquent à Nagios le chemin vers le fichier status.dat que vous avez vu précédemment dans ce cours, ainsi que l’intervalle de temps en seconde entre chaque mise à jour de ce fichier.
 
@@ -1097,7 +1097,7 @@ status_update_interval=10
 
 Vous pouvez constater ici que le fichier `status.dat` est bien référencé et qu’il sera mise à jour toutes les 10 secondes (je reviendrai sur ces 10 secondes dans prochain chapitre).
 
-- **resource_file**
+##### resource_file
 
 Cette directive permet d’indiquer les fichiers contenant la définition des **USER MACROS** évoquées précédemment dans le cours. La commande suivante permet de visualiser la valeur par défaut de cette directive : 
 
@@ -1162,7 +1162,7 @@ Souvenez vous que ce répertoire contient l’ensemble des plugins standards com
 Si vous êtes amenés à changer le répertoire des plugins pour x raisons, vous n’aurez alors que ce fichier à changer pour positionner la nouvelle valeur de **$USER1$** pour immédiatement migrer toute votre configuration.
 Le second point relève de la sécurité et je vous en reparlerai lorsque vous verrez l’interface d’administration dans le détail.
 
-- **command_file**, **check_external_commands**, **log_external_commands**
+##### command_file, check_external_commands, log_external_commands
 
 Exécutez la commande suivante : 
 
@@ -1967,6 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTE0Mzg1MjYzMDYsLTEwMDM1MzM5MTYsODM4NTU3
-Mjg1LDEwODcxMzgwNjddfQ==
+N0b3J5IjpbMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcy
+ODUsMTA4NzEzODA2N119
 -->
