@@ -514,7 +514,7 @@ Aïe ! Effectivement, Nagios relève déjà quelques soucis. Mais en observant u
 ## Partie 2 Installez votre outil de supervision
 ### Chapitre 2.2. Installez les plugins standards de Nagios.
 
->Dans ce chapitre vous allez installer les plugins standards de Nagios. Ces plugins sont dits « standards » car ils sont développés et maintenus par l’équipe de développement Nagios. Contrairement aux plugins dits « communautaires » qui sont mis à disposition par la communauté des utilisateurs Nagios via la plateforme [https://exchange.nagios.org](https://exchange.nagios.org).
+>**:information_source:** Dans ce chapitre vous allez installer les plugins standards de Nagios. Ces plugins sont dits « standards » car ils sont développés et maintenus par l’équipe de développement Nagios. Contrairement aux plugins dits « communautaires » qui sont mis à disposition par la communauté des utilisateurs Nagios via la plateforme [https://exchange.nagios.org](https://exchange.nagios.org).
 
 #### A. Préparez un serveur Debian à recevoir les plugins standards de Nagios.
 
@@ -1968,5 +1968,5 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTEwMDQ5OTkwMDksNDMzMTAwNTExXX0=
+N0b3J5IjpbMTA4NzEzODA2Nyw0MzMxMDA1MTFdfQ==
 -->
