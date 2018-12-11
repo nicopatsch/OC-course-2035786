@@ -1021,7 +1021,7 @@ nagios@NagiosDebian:~$ cat /usr/local/nagios/etc/nagios.cfg | wc -l
 
 Plus de 1300 lignes, c’est imposant !
 
-Essayons désormais de relever uniquement les lignes qui ne sont pas des commentaires. Lancez la commande suivante : 
+Essayons désormais de relever uniquement les lignes qui ne sont pas des commentaires. Pour cela, lancez la commande suivante : 
 
 ````shell
 nagios@NagiosDebian:~$ cat /usr/local/nagios/etc/nagios.cfg | grep -e ^[^#] | wc -l
@@ -1967,6 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTEwMDM1MzM5MTYsODM4NTU3Mjg1LDEwODcxMzgw
-NjddfQ==
+N0b3J5IjpbLTEzMTc4Mjg2MjUsLTEwMDM1MzM5MTYsODM4NTU3
+Mjg1LDEwODcxMzgwNjddfQ==
 -->
