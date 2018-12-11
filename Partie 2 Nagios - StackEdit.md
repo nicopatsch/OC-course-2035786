@@ -723,7 +723,7 @@ echo "alias testNagios='/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/na
 
 Attention à bien vérifier la syntaxe de cette commande (sur une seule ligne) et notamment les simples quotes et les doubles quotes.
 
-Par ailleurs, lorsque vous allez changer la configuration de Nagios, en ajoutant/supprimant/modifiant les sondes, outre le fait de tester cette nouvelle configuration, il est nécessaire d’indiquer à Nagios de la prendre en compte. Cette opération peut être effectuée en rechargeant (reload ou restart) le service Nagios.
+Par ailleurs, lorsque vous allez changer la configuration de Nagios, en ajoutant / supprimant / modifiant les sondes, outre le fait de tester cette nouvelle configuration, il est nécessaire d’indiquer à Nagios de la prendre en compte. Cette opération peut être effectuée en rechargeant (*reload* ou restart) le service Nagios.
 
 Cependant, l’utilisateur `nagios` n’a pas les droits de relancer le service Nagios, c’est normal, cette opération nécessite des privilèges que les comptes standards ne disposent pas par défaut.
 
@@ -1967,6 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbMzgxODE4OTEzLDgzODU1NzI4NSwxMDg3MTM4MDY3
-XX0=
+N0b3J5IjpbLTkzMDUzNTM3Myw4Mzg1NTcyODUsMTA4NzEzODA2
+N119
 -->
