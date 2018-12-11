@@ -1843,7 +1843,7 @@ Mais, comme je l’indiquais en introduction de ce chapitre, la nouvelle interfa
 
 >Voilà, le petit tour du propriétaire de l’interface d’administration Nagios est terminé. Vous avez compris comment fonctionne cette interface et notamment la notion de **commande externe** via le ***pipe FIFO*** de Nagios. Vous savez également où trouvez les informations importantes sur cette interface et vérifiez les performances de vos sondes.
 
->Il est temps désormais de quitter le champs local de Nagios et de s’intéresser à la supervision d’un host distant accompagné de ses services. Je vous retrouve donc avec plaisir dans la 3ième partie de ce cours qui consiste à mettre en place la supervision d’un serveur Web !
+>Il est temps désormais de quitter le champs local de Nagios et de s’intéresser à la supervision d’un host distant accompagné de ses services. Je vous retrouve donc avec plaisir dans la troisième partie de ce cours qui consiste à mettre en place la supervision d’un serveur Web !
 
 
 
@@ -1967,6 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTEzOTY2NTM0NTcsMTM0MDAxMzExMSwtMTAwMzUz
-MzkxNiw4Mzg1NTcyODUsMTA4NzEzODA2N119
+N0b3J5IjpbLTk2NDEwMDYwMSwxMzQwMDEzMTExLC0xMDAzNTMz
+OTE2LDgzODU1NzI4NSwxMDg3MTM4MDY3XX0=
 -->
