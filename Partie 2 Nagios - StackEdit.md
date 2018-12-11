@@ -811,7 +811,7 @@ Il existe une page dédiée pour les « débutants » sur la documentation offic
 **[SCREENSHOT : 2.3-1_Beginners ]**
 
 Prenez votre temps ! Vous verrez que Nagios possède un fonctionnement finalement assez simple, mais assez long à maitriser, et même une fois bien pratiqué, il réserve encore quelques pièges sympathiques ;
-Lisez la documentation ! Elle est très fournie et très claire, c’est une force pour Nagios. N’hésitez pas à la consulter régulièrement, elle vous apportera beaucoup de solutions ;
+Lisez la documentation ! Elle est très fournie et très claire, c’est une force pour Nagios. N’hésitez pas à la consulter régulièrement, elle vous apportera beaucoup de solutions.
 Vous n’êtes pas seuls ! L’autre grande force de Nagios réside dans sa communauté, et si vous n’avez pas trouvé la solution dans la documentation, vous la trouverez très probablement en posant simplement la question : [https://support.nagios.com/forum/](https://support.nagios.com/forum/).
 
 #### A. Recensez les différents éléments constituant de Nagios
@@ -1967,6 +1967,6 @@ Mgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRlIMOgIGNv
 bnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdWUgY2Ugc2
 9pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZYXBwcmVu
 YW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX19LCJoaX
-N0b3J5IjpbLTE0MzAxOTUyNDksODM4NTU3Mjg1LDEwODcxMzgw
+N0b3J5IjpbLTEwMDM1MzM5MTYsODM4NTU3Mjg1LDEwODcxMzgw
 NjddfQ==
 -->
