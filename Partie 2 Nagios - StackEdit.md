@@ -511,8 +511,12 @@ Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui 
 
 
 #### En résumé
-Dans ce chapitre, nous avons vu ensemble la premièrcomment préparer le serveur
-Car vous venez ici de compléter uniquement la première étape de l'installation de la solution Nagios Core, c'est à dire, la préparation de son serveur d'hébergement, la compilation de ses sources, la création de son arborescence et la configuration de son interface d'administration Web. La seconde étape consiste justement à compiler et installer ces plugins. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
+Dans ce chapitre, nous avons vu ensemble la première étape de l'installation de Nagios Core, c'est à dire :
+- la préparation de son serveur d'hébergement ; 
+- la compilation de ses sources ;
+- la création de son arborescence ;
+- la configuration de son interface d'administration Web. 
+La seconde étape consiste justement à **compiler et installer les plugins**. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJaT21HcmNzdlExMWxQVmQzIjp7In
 RleHQiOiJbQ2UgZG9jdW1lbnRdKGh0dHBzOi8vYXNzZXRzLm5h
@@ -563,8 +567,8 @@ N1bGllci4gQSBxdW9pIHNlcnQtaWwgPyBRdWUgcmVwcsOpc2Vu
 dGUtdC1pbCA/IElsIG1lIHNlbWJsZSBxdeKAmWlsIGZhdWRyYW
 l0IGJpZW4gZMOpZmluaXIgY2UgY29uY2VwdCBhdmFudCBkZSBj
 b250aW51ZXIuIFF14oCZZW4gcGVuc2VzLXR1ID8iLCJjcmVhdG
-VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOlstNjQzNDA3
-MDg5LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MDEsMT
-M0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4NzEz
-ODA2N119
+VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOlszOTg1MDIx
+NzAsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEwMDYwMSwxMz
+QwMDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NSwxMDg3MTM4
+MDY3XX0=
 -->
