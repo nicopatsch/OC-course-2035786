@@ -309,7 +309,7 @@ Enjoy.
 
 Bravo ! Il vous reste quelques commandes à passer pour finaliser l’installation.
 
-#### Installez l’arborescence et les fichiers Nagios sur le serveur
+#### Installez l’arborescence et les fichiers Nagios sur votre serveur
 
 ##### Créez l'arborescence Nagios
 Afin de créer l’arborescence Nagios et d’y installer les fichiers binaires lancez la commande suivante :
@@ -484,7 +484,7 @@ SERVICE ALERT: localhost;Total Processes;CRITICAL;HARD;1;(No output on stdout)
 
 Diantre ! Il semblerait que Nagios envoie déjà quelques alertes de supervision !
 
-#### I. Connectez vous une première fois à l’interface d’administration de Nagios
+#### Connectez-vous une première fois à l’interface d’administration de Nagios
 
 Allez immédiatement vérifier cet état de fait en consultant l’interface d’administration de Nagios. Pour cela, ouvrez un navigateur et connectez vous sur l’adresse IP de votre serveur Nagios via une URL du type :
 http://@ipServeurNagios/nagios (par exemple http://172.16.10.10/nagios).
@@ -507,7 +507,7 @@ Aïe ! Effectivement, Nagios relève déjà quelques soucis. Mais en observant u
 
 **[SCREENSHOT : 2.1-12_NoSuchFileOrDirectory ]**
 
->Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios. Car, vous venez ici de compléter uniquement la première étape de l'installation de la solution Nagios Core, c'est à dire, la préparation de son serveur d'hébergement, la compilation de ses sources, la création de son arborescence et la configuration de son interface d'administration Web. La seconde étape consiste justement à compiler et installer ces plugins. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
+Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios. Car, vous venez ici de compléter uniquement la première étape de l'installation de la solution Nagios Core, c'est à dire, la préparation de son serveur d'hébergement, la compilation de ses sources, la création de son arborescence et la configuration de son interface d'administration Web. La seconde étape consiste justement à compiler et installer ces plugins. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJaT21HcmNzdlExMWxQVmQzIjp7In
 RleHQiOiJbQ2UgZG9jdW1lbnRdKGh0dHBzOi8vYXNzZXRzLm5h
@@ -521,56 +521,45 @@ bCI6eyJ0ZXh0IjoiRW5maW4gcG91ciBpbnN0YWxsZXIgTmFnaW
 9zIGV0IHNlcyBwbHVnaW5zIHZvdXMgYXVyZXogYmVzb2luIGRl
 cyBvdXRpbHMgZGUgY29tcOKApiIsInN0YXJ0Ijo4NTY3LCJlbm
 QiOjg2ODV9LCJBNlFhb1FtUnlCZ29iUEp3Ijp7InRleHQiOiJ1
-dGlsaXNhdGV1ciIsInN0YXJ0Ijo5Njk2LCJlbmQiOjk3MDd9LC
-JxallCRmtZVW1pVmNkVVdYIjp7InRleHQiOiJDcsOpZXogbCdh
-cmJvcmVzY2VuY2UgTmFnaW9zIiwic3RhcnQiOjE3NDUxLCJlbm
-QiOjE3NDc4fX0sImNvbW1lbnRzIjp7IldDYkl2TUlVN3p5bjFo
-Tm8iOnsiZGlzY3Vzc2lvbklkIjoiWk9tR3Jjc3ZRMTFsUFZkMy
-IsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEzNTMzOCIsInRl
-eHQiOiJUdSBwZXV4IHV0aWxpc2VyIGNldHRlIHN5bnRheGUgcG
-91ciBpbnPDqXJlciB1biBsaWVuIGRhbnMgdW4gY2hhbXBzIGRl
-IHRleHRlLiBNYWlzIHNpIHR1IHNvdWhhaXRlcyBzaW1wbGVtZW
-50IGFmZmljaGVyIGxlIGxpZW4sIHR1IHBldXggbGUgY29waWVy
-LWNvbGxlciBkaXJlY3RlbWVudC4iLCJjcmVhdGVkIjoxNTQzMj
-Q4MDI4MTY2fSwiVE5zdkUwQWZkUXlpNEhWUyI6eyJkaXNjdXNz
-aW9uSWQiOiJtUk5ibld0QW44S2R4SWdBIiwic3ViIjoiZ286MT
-AyMTIxMDIwMjk1Njk5MTM1MzM4IiwidGV4dCI6IkVzdCljZSBx
-dWUgdHUgcGVuc2VzIHF1ZSDDp2EgdmF1ZHJhaXQgbGUgY2/Du3
-QgZGUgcsOpc3VtZXIgcmFwaWRlbWVudCDDoCBxdW9pIHNlcnZl
-bnQgY2VzIGxpYnJhaXJpZXMgPyBTYW5zIGVudHJlciBkYW5zIG
-xlcyBkw6l0YWlscywgbWFpcyBwYXIgZXhlbXBsZSBwb2ludGVy
-IHVuZSBmb25jdGlvbm5hbGl0w6kgZW4gcGFydGljdWxpZXIgcX
-VpIGxlcyBuw6ljZXNzaXRlLiBFc3QtY2UgcXVlIHR1IHZhcyBs
-J3V0aWxpc2VyIGRhbnMgY2UgY291cnMgP1xuUGVuc2VzLXR1IH
-F1ZSBjZSBzb2l0IHBlcnRpbmVudCBkZSBwcsOpY2lzZXIgw6dh
-ID8iLCJjcmVhdGVkIjoxNTQ0NTQ1NTE0MDMwfSwiSVY0cEQ2Sl
-BvUTZuUEFoWSI6eyJkaXNjdXNzaW9uSWQiOiJtRFFlbnQ2Z09z
-Ylh3Um9sIiwic3ViIjoiZ286MTAyMTIxMDIwMjk1Njk5MTM1Mz
-M4IiwidGV4dCI6IkVuY29yZSB1bmUgZm9pcywgaWwgbWUgc2Vt
-YmxlIHF1ZSDDp2EgdmF1ZHJhaXQgbGUgY291cCBkJ2V4cGxpcX
-VlciBlbiB1bmUgcGhyYXNlIMOgIHF1b2kgw6dhIHNlcnZpcmEs
-IHBvdXIgw6l2aXRlciBxdWUgbCfDqXR1ZGlhbnQgbidpbnN0YW
-xsZSBkZXMgcGFja2FnZXMgw6AgbCdhdmV1Z2xlLiBRdSdlbiBw
-ZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1NDQ1NDU2MTQyNjd9LC
-JNQmhvR0xHQ0hKY3NDZlU3Ijp7ImRpc2N1c3Npb25JZCI6IkE2
-UWFvUW1SeUJnb2JQSnciLCJzdWIiOiJnbzoxMDIxMjEwMjAyOT
-U2OTkxMzUzMzgiLCJ0ZXh0IjoiRGUgY2UgcXVlIGplIHZvaXMs
-IGxlIGNvbmNlcHQgZOKAmXV0aWxpc2F0ZXVyIGljaSBlc3QgYX
-NzZXogcGFydGljdWxpZXIuIEEgcXVvaSBzZXJ0LWlsID8gUXVl
-IHJlcHLDqXNlbnRlLXQtaWwgPyBJbCBtZSBzZW1ibGUgcXXigJ
-lpbCBmYXVkcmFpdCBiaWVuIGTDqWZpbmlyIGNlIGNvbmNlcHQg
-YXZhbnQgZGUgY29udGludWVyLiBRdeKAmWVuIHBlbnNlcy10dS
-A/IiwiY3JlYXRlZCI6MTU0NDU0NjE3NjA5NX0sIlJ5ZWNtYWRV
-VGR6QzBOdGsiOnsiZGlzY3Vzc2lvbklkIjoicWpZQkZrWVVtaV
-ZjZFVXWCIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEzNTMz
-OCIsInRleHQiOiJDZWNpIGVzdCB1biBzb3VzLXRpdHJlIHF1aS
-B2aWVudCDDoCBs4oCZaW50w6lyaWV1ciBk4oCZdW5lIHNlY3Rp
-b24uIErigJlhaSByZW1wbGFjw6kgdG91cyB0ZXMgdGlyZXRzIH
-BhciBjZXMgc291cy10aXRyZXMgbMOgLiBKZSB04oCZaW52aXRl
-IMOgIGNvbnRpbnVlciBkZSBsZXMgdXRpbGlzZXIgcG91ciBxdW
-UgY2Ugc29pdCB2aXN1ZWxsZW1lbnQgY2xhaXIgcG91ciBs4oCZ
-YXBwcmVuYW50IDopIiwiY3JlYXRlZCI6MTU0NDU0NjI0NDU4OX
-19LCJoaXN0b3J5IjpbMTQ0MTUyMzM4MSwxMzg2MjE0NjI3LDQ0
-NTYxNTIzMCwtOTY0MTAwNjAxLDEzNDAwMTMxMTEsLTEwMDM1Mz
-M5MTYsODM4NTU3Mjg1LDEwODcxMzgwNjddfQ==
+dGlsaXNhdGV1ciIsInN0YXJ0Ijo5Njk2LCJlbmQiOjk3MDd9fS
+wiY29tbWVudHMiOnsiV0NiSXZNSVU3enluMWhObyI6eyJkaXNj
+dXNzaW9uSWQiOiJaT21HcmNzdlExMWxQVmQzIiwic3ViIjoiZ2
+86MTAyMTIxMDIwMjk1Njk5MTM1MzM4IiwidGV4dCI6IlR1IHBl
+dXggdXRpbGlzZXIgY2V0dGUgc3ludGF4ZSBwb3VyIGluc8Opcm
+VyIHVuIGxpZW4gZGFucyB1biBjaGFtcHMgZGUgdGV4dGUuIE1h
+aXMgc2kgdHUgc291aGFpdGVzIHNpbXBsZW1lbnQgYWZmaWNoZX
+IgbGUgbGllbiwgdHUgcGV1eCBsZSBjb3BpZXItY29sbGVyIGRp
+cmVjdGVtZW50LiIsImNyZWF0ZWQiOjE1NDMyNDgwMjgxNjZ9LC
+JUTnN2RTBBZmRReWk0SFZTIjp7ImRpc2N1c3Npb25JZCI6Im1S
+TmJuV3RBbjhLZHhJZ0EiLCJzdWIiOiJnbzoxMDIxMjEwMjAyOT
+U2OTkxMzUzMzgiLCJ0ZXh0IjoiRXN0KWNlIHF1ZSB0dSBwZW5z
+ZXMgcXVlIMOnYSB2YXVkcmFpdCBsZSBjb8O7dCBkZSByw6lzdW
+1lciByYXBpZGVtZW50IMOgIHF1b2kgc2VydmVudCBjZXMgbGli
+cmFpcmllcyA/IFNhbnMgZW50cmVyIGRhbnMgbGVzIGTDqXRhaW
+xzLCBtYWlzIHBhciBleGVtcGxlIHBvaW50ZXIgdW5lIGZvbmN0
+aW9ubmFsaXTDqSBlbiBwYXJ0aWN1bGllciBxdWkgbGVzIG7DqW
+Nlc3NpdGUuIEVzdC1jZSBxdWUgdHUgdmFzIGwndXRpbGlzZXIg
+ZGFucyBjZSBjb3VycyA/XG5QZW5zZXMtdHUgcXVlIGNlIHNvaX
+QgcGVydGluZW50IGRlIHByw6ljaXNlciDDp2EgPyIsImNyZWF0
+ZWQiOjE1NDQ1NDU1MTQwMzB9LCJJVjRwRDZKUG9RNm5QQWhZIj
+p7ImRpc2N1c3Npb25JZCI6Im1EUWVudDZnT3NiWHdSb2wiLCJz
+dWIiOiJnbzoxMDIxMjEwMjAyOTU2OTkxMzUzMzgiLCJ0ZXh0Ij
+oiRW5jb3JlIHVuZSBmb2lzLCBpbCBtZSBzZW1ibGUgcXVlIMOn
+YSB2YXVkcmFpdCBsZSBjb3VwIGQnZXhwbGlxdWVyIGVuIHVuZS
+BwaHJhc2Ugw6AgcXVvaSDDp2Egc2VydmlyYSwgcG91ciDDqXZp
+dGVyIHF1ZSBsJ8OpdHVkaWFudCBuJ2luc3RhbGxlIGRlcyBwYW
+NrYWdlcyDDoCBsJ2F2ZXVnbGUuIFF1J2VuIHBlbnNlcy10dSA/
+IiwiY3JlYXRlZCI6MTU0NDU0NTYxNDI2N30sIk1CaG9HTEdDSE
+pjc0NmVTciOnsiZGlzY3Vzc2lvbklkIjoiQTZRYW9RbVJ5Qmdv
+YlBKdyIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEzNTMzOC
+IsInRleHQiOiJEZSBjZSBxdWUgamUgdm9pcywgbGUgY29uY2Vw
+dCBk4oCZdXRpbGlzYXRldXIgaWNpIGVzdCBhc3NleiBwYXJ0aW
+N1bGllci4gQSBxdW9pIHNlcnQtaWwgPyBRdWUgcmVwcsOpc2Vu
+dGUtdC1pbCA/IElsIG1lIHNlbWJsZSBxdeKAmWlsIGZhdWRyYW
+l0IGJpZW4gZMOpZmluaXIgY2UgY29uY2VwdCBhdmFudCBkZSBj
+b250aW51ZXIuIFF14oCZZW4gcGVuc2VzLXR1ID8iLCJjcmVhdG
+VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOlstMTU0NTcz
+MTY1NSwxMzg2MjE0NjI3LDQ0NTYxNTIzMCwtOTY0MTAwNjAxLD
+EzNDAwMTMxMTEsLTEwMDM1MzM5MTYsODM4NTU3Mjg1LDEwODcx
+MzgwNjddfQ==
 -->
