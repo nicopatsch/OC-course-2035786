@@ -337,7 +337,7 @@ drwxrwsr-x  4 nagios nagios 4,0K nov.  23 10:37 var
 ```
 
 ##### Installez le service Nagios
-Ensuite, vous allez installer le service Nagios, c’est à dire les composants nécessaires à faire démarrer Nagios avec la machine. Lancez la commande suivante :
+Ensuite, vous allez installé le service Nagios, c’est à dire les composants nécessaires à faire démarrer Nagios avec la machine. Lancez la commande suivante :
 
 ```shell
 make install-daemoninit
@@ -556,8 +556,8 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6WzUxNDk4NDE5OSwyMD
-I4MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2
-MDEsMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMT
-A4NzEzODA2N119
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0yMTA3ODA1Nzg3LD
+IwMjgxMzgzODYsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEw
+MDYwMSwxMzQwMDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NS
+wxMDg3MTM4MDY3XX0=
 -->
