@@ -507,7 +507,12 @@ Aïe ! Effectivement, Nagios relève déjà quelques soucis. Mais en observant u
 
 **[SCREENSHOT : 2.1-12_NoSuchFileOrDirectory ]**
 
-Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios. Car, vous venez ici de compléter uniquement la première étape de l'installation de la solution Nagios Core, c'est à dire, la préparation de son serveur d'hébergement, la compilation de ses sources, la création de son arborescence et la configuration de son interface d'administration Web. La seconde étape consiste justement à compiler et installer ces plugins. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
+Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios que nous n'avons pas encore installés. 
+
+
+#### En résumé
+Dans ce chapitre, nous avons vu ensemble la premièrcomment préparer le serveur
+Car vous venez ici de compléter uniquement la première étape de l'installation de la solution Nagios Core, c'est à dire, la préparation de son serveur d'hébergement, la compilation de ses sources, la création de son arborescence et la configuration de son interface d'administration Web. La seconde étape consiste justement à compiler et installer ces plugins. Ces actions viendront corriger d'elles mêmes les erreurs affichées sur l'interface. C'est ce que je vous propose de réaliser dans le prochaine chapitre !
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJaT21HcmNzdlExMWxQVmQzIjp7In
 RleHQiOiJbQ2UgZG9jdW1lbnRdKGh0dHBzOi8vYXNzZXRzLm5h
@@ -558,8 +563,8 @@ N1bGllci4gQSBxdW9pIHNlcnQtaWwgPyBRdWUgcmVwcsOpc2Vu
 dGUtdC1pbCA/IElsIG1lIHNlbWJsZSBxdeKAmWlsIGZhdWRyYW
 l0IGJpZW4gZMOpZmluaXIgY2UgY29uY2VwdCBhdmFudCBkZSBj
 b250aW51ZXIuIFF14oCZZW4gcGVuc2VzLXR1ID8iLCJjcmVhdG
-VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOlstMTU0NTcz
-MTY1NSwxMzg2MjE0NjI3LDQ0NTYxNTIzMCwtOTY0MTAwNjAxLD
-EzNDAwMTMxMTEsLTEwMDM1MzM5MTYsODM4NTU3Mjg1LDEwODcx
-MzgwNjddfQ==
+VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOlstNjQzNDA3
+MDg5LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MDEsMT
+M0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4NzEz
+ODA2N119
 -->
