@@ -1,17 +1,18 @@
 ## Partie 2 Installez votre outil de supervision
-### Chapitre 2.1. Installez la solution Nagios CORE
 
->Maintenant que vous avez connaissance des problématiques de supervision, 
->des différents acteurs sur le marché ainsi que des avantages et inconvénients de fairele choix de la solution Nagios, je vous retrouve donc dans ce chapitre avec l’objectif d’installer Nagios Core depuis les sources sur un système GNU/Linux. Ce processus peut se détailler en 4 grandes étapes :
+### Chapitre 2.1. Installez Nagios Core sur votre serveur Debian
 
->-   La **préparation du serveur** à héberger le service Nagios ;
->-   Le **téléchargement et la compilation des sources** Nagios ;
->-   L’installation de **l’arborescence** Nagios ;
->-   Le vérification de la connexion à **l’interface d’administration** de Nagios.
+Maintenant que vous avez connaissance des problématiques de supervision, des différents acteurs sur le marché ainsi que des avantages et inconvénients de faire le choix de la solution Nagios, je vous retrouve donc dans ce chapitre avec l’objectif d’installer Nagios Core depuis les sources sur un système GNU/Linux. Ce processus peut se détailler en 4 grandes étapes :
+
+-   La **préparation du serveur** à héberger le service Nagios ;
+-   Le **téléchargement et la compilation des sources** Nagios ;
+-   L’installation de **l’arborescence** Nagios ;
+-   Le vérification de la connexion à **l’interface d’administration** de Nagios.
 
 #### Préparez votre serveur Debian à recevoir Nagios
 
-La machine cible de l’installation de Nagios est une **Debian Stretch 9.6.0** en version minimale disponible au téléchargement directement depuis le site de Debian. Par exemple, pour une architecture amd64 : https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
+La machine cible de l’installation de Nagios est une **Debian Stretch 9.6.0** en version minimale disponible au téléchargement directement depuis le site de Debian. Par exemple, pour une architecture amd64 [
+](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso).
 
 **[SCREENSHOT : 2.1-1_ImageMinimaleDebian ]**
 
@@ -509,7 +510,6 @@ Aïe ! Effectivement, Nagios relève déjà quelques soucis. Mais en observant u
 
 Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios que nous n'avons pas encore installés. 
 
-
 #### En résumé
 Dans ce chapitre, nous avons vu ensemble la première étape de l'installation de Nagios Core, c'est à dire :
 - la préparation de son serveur d'hébergement ; 
@@ -525,12 +525,12 @@ FsbGluZy1OYWdp4oCmIiwic3RhcnQiOjAsImVuZCI6MH0sIm1S
 TmJuV3RBbjhLZHhJZ0EiOnsidGV4dCI6IlBvdXIgZXhwbG9pdG
 VyIGF1IG1heGltdW0gbGVzIHBvc3NpYmlsaXTDqXMgb2ZmZXJ0
 ZXMgcGFyIGxlcyBwbHVnaW5zIGRlIE5hZ2lvcyzigKYiLCJzdG
-FydCI6MzI0NCwiZW5kIjozMzg1fSwibURRZW50NmdPc2JYd1Jv
+FydCI6MzI1NiwiZW5kIjozMzk3fSwibURRZW50NmdPc2JYd1Jv
 bCI6eyJ0ZXh0IjoiRW5maW4gcG91ciBpbnN0YWxsZXIgTmFnaW
 9zIGV0IHNlcyBwbHVnaW5zIHZvdXMgYXVyZXogYmVzb2luIGRl
-cyBvdXRpbHMgZGUgY29tcOKApiIsInN0YXJ0Ijo4NTY3LCJlbm
-QiOjg2ODV9LCJBNlFhb1FtUnlCZ29iUEp3Ijp7InRleHQiOiJ1
-dGlsaXNhdGV1ciIsInN0YXJ0Ijo5Njk2LCJlbmQiOjk3MDd9fS
+cyBvdXRpbHMgZGUgY29tcOKApiIsInN0YXJ0Ijo4NTc5LCJlbm
+QiOjg2OTd9LCJBNlFhb1FtUnlCZ29iUEp3Ijp7InRleHQiOiJ1
+dGlsaXNhdGV1ciIsInN0YXJ0Ijo5NzA4LCJlbmQiOjk3MTl9fS
 wiY29tbWVudHMiOnsiV0NiSXZNSVU3enluMWhObyI6eyJkaXNj
 dXNzaW9uSWQiOiJaT21HcmNzdlExMWxQVmQzIiwic3ViIjoiZ2
 86MTAyMTIxMDIwMjk1Njk5MTM1MzM4IiwidGV4dCI6IlR1IHBl
@@ -567,8 +567,8 @@ N1bGllci4gQSBxdW9pIHNlcnQtaWwgPyBRdWUgcmVwcsOpc2Vu
 dGUtdC1pbCA/IElsIG1lIHNlbWJsZSBxdeKAmWlsIGZhdWRyYW
 l0IGJpZW4gZMOpZmluaXIgY2UgY29uY2VwdCBhdmFudCBkZSBj
 b250aW51ZXIuIFF14oCZZW4gcGVuc2VzLXR1ID8iLCJjcmVhdG
-VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOlszOTg1MDIx
-NzAsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEwMDYwMSwxMz
+VkIjoxNTQ0NTQ2MTc2MDk1fX0sImhpc3RvcnkiOls2NTcxNzMz
+MjMsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEwMDYwMSwxMz
 QwMDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NSwxMDg3MTM4
 MDY3XX0=
 -->
