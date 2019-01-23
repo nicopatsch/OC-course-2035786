@@ -27,7 +27,7 @@ Nagios nécessite quelques packages supplémentaires sur cette installation mini
 
 Vous allez donc installer quelques dépendances via diverses commandes que je vous présente dans la suite.
 
-#### Installez le serveur Apache
+##### Installez le serveur Apache
 Pour accéder à l’interface web de gestion de Nagios, vous avez besoin d’un serveur apache et de l’interpréteur PHP.
 
 ```shell 
@@ -51,7 +51,7 @@ apache2 apache2-bin apache2-data apache2-utils fontconfig-config fonts-dejavu-co
 
 libtiff5 libwebp6 libxpm4 mlock php php-common php-curl php-gd php-imap php-mcrypt php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-gd php7.0-imap php7.0-json php7.0-mcrypt php7.0-opcache php7.0-readline psmisc ssl-cert
 ```
-#### Installez les librairies Perl
+##### Installez les librairies Perl
 Pour exploiter au maximum les possibilités offertes par les plugins de Nagios, vous avez besoin de quelques librairies Perl supplémentaires :
 
 ```shell
@@ -83,7 +83,7 @@ libspecio-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-iden
 libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl linux-libc-dev manpages-dev perl-openssl-defaults autoconf automake autotools-dev libsigsegv2 m4
 ```
 
-#### Installez les librairies graphiques
+##### Installez les librairies graphiques
 Nagios nécessite également quelques librairies graphiques :
 
 ```shell
@@ -110,7 +110,7 @@ libvpx-dev libvpx4 libx11-dev libx11-doc libxau-dev libxcb1-dev libxdmcp-dev lib
 x11proto-core-dev x11proto-input-dev x11proto-kb-dev xorg-sgml-doctools xtrans-dev zlib1g-dev
 ```
 
-#### Installez les outils de compilation standards
+##### Installez les outils de compilation standards
 Enfin pour installer Nagios et ses plugins vous aurez besoin des outils de compilation standards et du package unzip :
 
 ```shell
@@ -132,7 +132,7 @@ Les NOUVEAUX paquets suivants seront installés :
 
 binutils cpp cpp-6 gcc gcc-6 libasan3 libatomic1 libcc1-0 libcilkrts5 libgcc-6-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpfr4 libmpx2 libquadmath0 libtsan0 libubsan0 make unzip
 ```
-#### Créez l'environnement Nagios
+##### Créez l'environnement Nagios
 Il vous reste juste quelques ajouts d’ordre administratif à effectuer. Et notamment la **création de l’environnement Nagios**, avec son utilisateur, son groupe et son répertoire de travail.
 
 Pour ajouter l’utilisateur **`nagios`** sur le système, saisissez la commande suivante :
@@ -521,13 +521,13 @@ La seconde étape consiste justement à **compiler et installer les plugins**. C
 eyJkaXNjdXNzaW9ucyI6eyJtUk5ibld0QW44S2R4SWdBIjp7In
 RleHQiOiJQb3VyIGV4cGxvaXRlciBhdSBtYXhpbXVtIGxlcyBw
 b3NzaWJpbGl0w6lzIG9mZmVydGVzIHBhciBsZXMgcGx1Z2lucy
-BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjMyNzAsImVuZCI6MzQx
-MX0sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
+BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjMyNzIsImVuZCI6MzQx
+M30sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
 BvdXIgaW5zdGFsbGVyIE5hZ2lvcyBldCBzZXMgcGx1Z2lucyB2
 b3VzIGF1cmV6IGJlc29pbiBkZXMgb3V0aWxzIGRlIGNvbXDigK
-YiLCJzdGFydCI6ODU5MywiZW5kIjo4NzExfSwiQTZRYW9RbVJ5
+YiLCJzdGFydCI6ODU5NywiZW5kIjo4NzE1fSwiQTZRYW9RbVJ5
 QmdvYlBKdyI6eyJ0ZXh0IjoidXRpbGlzYXRldXIiLCJzdGFydC
-I6OTcyMiwiZW5kIjo5NzMzfX0sImNvbW1lbnRzIjp7IlROc3ZF
+I6OTcyNywiZW5kIjo5NzM4fX0sImNvbW1lbnRzIjp7IlROc3ZF
 MEFmZFF5aTRIVlMiOnsiZGlzY3Vzc2lvbklkIjoibVJOYm5XdE
 FuOEtkeElnQSIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEz
 NTMzOCIsInRleHQiOiJFc3QpY2UgcXVlIHR1IHBlbnNlcyBxdW
@@ -556,9 +556,8 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0yMTA3ODA1Nzg3LC
-0xMjUxNjA1NTY4LC0yMTA3ODA1Nzg3LDIwMjgxMzgzODYsMTM4
-NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEwMDYwMSwxMzQwMDEzMT
-ExLC0xMDAzNTMzOTE2LDgzODU1NzI4NSwxMDg3MTM4MDY3XX0=
-
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6WzE0OTc5NTMyOCwtMj
+EwNzgwNTc4NywtMTI1MTYwNTU2OCwyMDI4MTM4Mzg2LDEzODYy
+MTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MDEsMTM0MDAxMzExMS
+wtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4NzEzODA2N119
 -->
