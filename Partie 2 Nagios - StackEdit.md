@@ -57,6 +57,8 @@ Pour exploiter au maximum les possibilités offertes par les plugins de Nagios, 
 ```shell
 apt-get install libxml-libxml-perl libnet-snmp-perl libperl-dev libnumber-format-perl libconfig-inifiles-perl libdatetime-perl libnet-dns-perl
 ```
+Vous pourrez noter par exemple les librairies perl SNMP. En effet sans l'inclusion de ces librairies, le plugin SNMP de Nagios ne pourra pas fonctionner !
+
 Cette commande va installer les packages suivants :
 
 ```console
@@ -113,6 +115,8 @@ x11proto-core-dev x11proto-input-dev x11proto-kb-dev xorg-sgml-doctools xtrans-d
 ##### Installez les outils de compilation standards
 Enfin pour installer Nagios et ses plugins vous aurez besoin des outils de compilation standards et du package unzip :
 
+En effet, Nagios est un programme compilé en C, donc le compilateur GCC et ses outils associés MAKE et AUTOCONF sont indispensables, et les sources sont téléchargées souvent dans un format compressé, donc UNZIP est nécessaire également.
+
 ```shell
 apt-get install gcc make autoconf libc6 unzip
 ```
@@ -135,12 +139,13 @@ binutils cpp cpp-6 gcc gcc-6 libasan3 libatomic1 libcc1-0 libcilkrts5 libgcc-6-d
 ##### Créez l'environnement Nagios
 Il vous reste juste quelques ajouts d’ordre administratif à effectuer. Et notamment la **création de l’environnement Nagios**, avec son utilisateur, son groupe et son répertoire de travail.
 
+Car Nagios est un programme qui n'a pas besoin de tourner sous root. Donc par mesure de sécurité, il est 
+
 Pour ajouter l’utilisateur **`nagios`** sur le système, saisissez la commande suivante :
 
 ```shell
 useradd -m -p $(openssl passwd nagios) nagios
 ```
-
 Cette commande créé l’utilisateur `nagios` sur le système et initie son mot de passe à `nagios`. Bien entendu, il vous sera nécessaire de renforcer ce mot de passe sur une machine de production.
 
 >Par ailleurs, il est également nécessaire de partager un groupe commun entre l’utilisateur `nagios` et l’utilisateur `www-data` (qui fait tourner le **serveur Web apache2**) afin notamment de rendre possible l’administration de Nagios depuis l’interface web. Je reviendrai concrètement sur cette notion un peu plus loin dans le cours.
@@ -525,39 +530,40 @@ BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjMyNzIsImVuZCI6MzQx
 M30sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
 BvdXIgaW5zdGFsbGVyIE5hZ2lvcyBldCBzZXMgcGx1Z2lucyB2
 b3VzIGF1cmV6IGJlc29pbiBkZXMgb3V0aWxzIGRlIGNvbXDigK
-YiLCJzdGFydCI6ODU5NywiZW5kIjo4NzE1fSwiQTZRYW9RbVJ5
+YiLCJzdGFydCI6ODc1MywiZW5kIjo4ODcxfSwiQTZRYW9RbVJ5
 QmdvYlBKdyI6eyJ0ZXh0IjoidXRpbGlzYXRldXIiLCJzdGFydC
-I6OTcyNywiZW5kIjo5NzM4fX0sImNvbW1lbnRzIjp7IlROc3ZF
-MEFmZFF5aTRIVlMiOnsiZGlzY3Vzc2lvbklkIjoibVJOYm5XdE
-FuOEtkeElnQSIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEz
-NTMzOCIsInRleHQiOiJFc3QpY2UgcXVlIHR1IHBlbnNlcyBxdW
-Ugw6dhIHZhdWRyYWl0IGxlIGNvw7t0IGRlIHLDqXN1bWVyIHJh
-cGlkZW1lbnQgw6AgcXVvaSBzZXJ2ZW50IGNlcyBsaWJyYWlyaW
-VzID8gU2FucyBlbnRyZXIgZGFucyBsZXMgZMOpdGFpbHMsIG1h
-aXMgcGFyIGV4ZW1wbGUgcG9pbnRlciB1bmUgZm9uY3Rpb25uYW
-xpdMOpIGVuIHBhcnRpY3VsaWVyIHF1aSBsZXMgbsOpY2Vzc2l0
-ZS4gRXN0LWNlIHF1ZSB0dSB2YXMgbCd1dGlsaXNlciBkYW5zIG
-NlIGNvdXJzID9cblBlbnNlcy10dSBxdWUgY2Ugc29pdCBwZXJ0
-aW5lbnQgZGUgcHLDqWNpc2VyIMOnYSA/IiwiY3JlYXRlZCI6MT
-U0NDU0NTUxNDAzMH0sIklWNHBENkpQb1E2blBBaFkiOnsiZGlz
-Y3Vzc2lvbklkIjoibURRZW50NmdPc2JYd1JvbCIsInN1YiI6Im
-dvOjEwMjEyMTAyMDI5NTY5OTEzNTMzOCIsInRleHQiOiJFbmNv
-cmUgdW5lIGZvaXMsIGlsIG1lIHNlbWJsZSBxdWUgw6dhIHZhdW
-RyYWl0IGxlIGNvdXAgZCdleHBsaXF1ZXIgZW4gdW5lIHBocmFz
-ZSDDoCBxdW9pIMOnYSBzZXJ2aXJhLCBwb3VyIMOpdml0ZXIgcX
-VlIGwnw6l0dWRpYW50IG4naW5zdGFsbGUgZGVzIHBhY2thZ2Vz
-IMOgIGwnYXZldWdsZS4gUXUnZW4gcGVuc2VzLXR1ID8iLCJjcm
-VhdGVkIjoxNTQ0NTQ1NjE0MjY3fSwiTUJob0dMR0NISmNzQ2ZV
-NyI6eyJkaXNjdXNzaW9uSWQiOiJBNlFhb1FtUnlCZ29iUEp3Ii
-wic3ViIjoiZ286MTAyMTIxMDIwMjk1Njk5MTM1MzM4IiwidGV4
-dCI6IkRlIGNlIHF1ZSBqZSB2b2lzLCBsZSBjb25jZXB0IGTigJ
-l1dGlsaXNhdGV1ciBpY2kgZXN0IGFzc2V6IHBhcnRpY3VsaWVy
-LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
-lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
-biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
-Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6WzE0OTc5NTMyOCwtMj
-EwNzgwNTc4NywtMTI1MTYwNTU2OCwyMDI4MTM4Mzg2LDEzODYy
-MTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MDEsMTM0MDAxMzExMS
-wtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4NzEzODA2N119
+I6MTAxMjEsImVuZCI6MTAxMzJ9fSwiY29tbWVudHMiOnsiVE5z
+dkUwQWZkUXlpNEhWUyI6eyJkaXNjdXNzaW9uSWQiOiJtUk5ibl
+d0QW44S2R4SWdBIiwic3ViIjoiZ286MTAyMTIxMDIwMjk1Njk5
+MTM1MzM4IiwidGV4dCI6IkVzdCljZSBxdWUgdHUgcGVuc2VzIH
+F1ZSDDp2EgdmF1ZHJhaXQgbGUgY2/Du3QgZGUgcsOpc3VtZXIg
+cmFwaWRlbWVudCDDoCBxdW9pIHNlcnZlbnQgY2VzIGxpYnJhaX
+JpZXMgPyBTYW5zIGVudHJlciBkYW5zIGxlcyBkw6l0YWlscywg
+bWFpcyBwYXIgZXhlbXBsZSBwb2ludGVyIHVuZSBmb25jdGlvbm
+5hbGl0w6kgZW4gcGFydGljdWxpZXIgcXVpIGxlcyBuw6ljZXNz
+aXRlLiBFc3QtY2UgcXVlIHR1IHZhcyBsJ3V0aWxpc2VyIGRhbn
+MgY2UgY291cnMgP1xuUGVuc2VzLXR1IHF1ZSBjZSBzb2l0IHBl
+cnRpbmVudCBkZSBwcsOpY2lzZXIgw6dhID8iLCJjcmVhdGVkIj
+oxNTQ0NTQ1NTE0MDMwfSwiSVY0cEQ2SlBvUTZuUEFoWSI6eyJk
+aXNjdXNzaW9uSWQiOiJtRFFlbnQ2Z09zYlh3Um9sIiwic3ViIj
+oiZ286MTAyMTIxMDIwMjk1Njk5MTM1MzM4IiwidGV4dCI6IkVu
+Y29yZSB1bmUgZm9pcywgaWwgbWUgc2VtYmxlIHF1ZSDDp2Egdm
+F1ZHJhaXQgbGUgY291cCBkJ2V4cGxpcXVlciBlbiB1bmUgcGhy
+YXNlIMOgIHF1b2kgw6dhIHNlcnZpcmEsIHBvdXIgw6l2aXRlci
+BxdWUgbCfDqXR1ZGlhbnQgbidpbnN0YWxsZSBkZXMgcGFja2Fn
+ZXMgw6AgbCdhdmV1Z2xlLiBRdSdlbiBwZW5zZXMtdHUgPyIsIm
+NyZWF0ZWQiOjE1NDQ1NDU2MTQyNjd9LCJNQmhvR0xHQ0hKY3ND
+ZlU3Ijp7ImRpc2N1c3Npb25JZCI6IkE2UWFvUW1SeUJnb2JQSn
+ciLCJzdWIiOiJnbzoxMDIxMjEwMjAyOTU2OTkxMzUzMzgiLCJ0
+ZXh0IjoiRGUgY2UgcXVlIGplIHZvaXMsIGxlIGNvbmNlcHQgZO
+KAmXV0aWxpc2F0ZXVyIGljaSBlc3QgYXNzZXogcGFydGljdWxp
+ZXIuIEEgcXVvaSBzZXJ0LWlsID8gUXVlIHJlcHLDqXNlbnRlLX
+QtaWwgPyBJbCBtZSBzZW1ibGUgcXXigJlpbCBmYXVkcmFpdCBi
+aWVuIGTDqWZpbmlyIGNlIGNvbmNlcHQgYXZhbnQgZGUgY29udG
+ludWVyLiBRdeKAmWVuIHBlbnNlcy10dSA/IiwiY3JlYXRlZCI6
+MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbMzM0MTk5NDcwLD
+E0OTc5NTMyOCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OCwyMDI4
+MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MD
+EsMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4
+NzEzODA2N119
 -->
