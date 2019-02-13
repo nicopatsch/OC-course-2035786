@@ -241,7 +241,7 @@ La compilation des sources Nagios passe par un script `configure` qui permet not
 
 Dans votre cas, vous allez indiquer où se situent le répertoire par défaut de la configuration des sites web ainsi que le groupe `nagcmd` que vous souhaitez configurer, avec la commande suivante (**sur la même ligne** ! ) :
 
-```shell
+````shell
 ./configure --with-httpd-conf=/etc/apache2/sites-enabled --with-command-group=nagcmd
 ```
 
@@ -561,9 +561,9 @@ ZXIuIEEgcXVvaSBzZXJ0LWlsID8gUXVlIHJlcHLDqXNlbnRlLX
 QtaWwgPyBJbCBtZSBzZW1ibGUgcXXigJlpbCBmYXVkcmFpdCBi
 aWVuIGTDqWZpbmlyIGNlIGNvbmNlcHQgYXZhbnQgZGUgY29udG
 ludWVyLiBRdeKAmWVuIHBlbnNlcy10dSA/IiwiY3JlYXRlZCI6
-MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbMzM0MTk5NDcwLD
-E0OTc5NTMyOCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OCwyMDI4
-MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MD
-EsMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4
-NzEzODA2N119
+MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbOTgyNjQzNjQ2LD
+MzNDE5OTQ3MCwxNDk3OTUzMjgsLTIxMDc4MDU3ODcsLTEyNTE2
+MDU1NjgsMjAyODEzODM4NiwxMzg2MjE0NjI3LDQ0NTYxNTIzMC
+wtOTY0MTAwNjAxLDEzNDAwMTMxMTEsLTEwMDM1MzM5MTYsODM4
+NTU3Mjg1LDEwODcxMzgwNjddfQ==
 -->
