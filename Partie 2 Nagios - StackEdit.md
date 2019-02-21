@@ -376,7 +376,7 @@ chmod g+s /usr/local/nagios/var/rw
 *** External command directory configured ***
 ```
 
-Vous pouvez notamment constater la création d’un répertoire « **rw** » dans l’arborescence Nagios auquel sont attribués les droits de lecture et d’écriture pour l’utilisateur `nagios` et le groupe `nagcmd` (que vous avez indiqué lors de l’exécution du script `configure`).
+Vous pouvez notamment constater qu’un répertoire `**rw**` a été créé dans l’arborescence Nagios. Les droits de lecture et d’écriture sont attribués à l’utilisateur `nagios` et au groupe `nagcmd` (que vous avez indiqué lors de l’exécution du script `configure`).
 
 Par ailleurs la présence du **sticky bit** (via la commande `chmod g+s`) permet de distribuer l’ID du groupe `nagcmd` à tous les fichiers et répertoires qui seraient créés dans ce répertoire `rw`. Vous verrez un peu plus loin dans le cours qu’au lancement de Nagios, ce dernier créé justement son « **pipe** » de commandes dans ce répertoire. Je vous donne rendez vous dans le chapitre 4 de cette partie pour illustrer complètement le fonctionnement de ce « **pipe** ».
 
@@ -560,10 +560,10 @@ ZXIuIEEgcXVvaSBzZXJ0LWlsID8gUXVlIHJlcHLDqXNlbnRlLX
 QtaWwgPyBJbCBtZSBzZW1ibGUgcXXigJlpbCBmYXVkcmFpdCBi
 aWVuIGTDqWZpbmlyIGNlIGNvbmNlcHQgYXZhbnQgZGUgY29udG
 ludWVyLiBRdeKAmWVuIHBlbnNlcy10dSA/IiwiY3JlYXRlZCI6
-MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbMTk2MzM3NTgwLD
-c3MDk4MzUwMiw5ODI2NDM2NDYsMzM0MTk5NDcwLDE0OTc5NTMy
-OCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OCwyMDI4MTM4Mzg2LD
-EzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MDEsMTM0MDAx
-MzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4NzEzODA2N1
-19
+MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbLTExNzczNjc5NT
+AsNzcwOTgzNTAyLDk4MjY0MzY0NiwzMzQxOTk0NzAsMTQ5Nzk1
+MzI4LC0yMTA3ODA1Nzg3LC0xMjUxNjA1NTY4LDIwMjgxMzgzOD
+YsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEwMDYwMSwxMzQw
+MDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NSwxMDg3MTM4MD
+Y3XX0=
 -->
