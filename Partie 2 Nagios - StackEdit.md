@@ -254,38 +254,55 @@ drwxrwsr-x  2 nagios nagios 4,0K nov.  23 10:37 libexec
 drwxr-sr-x  7 root staff  4,0K nov.  23 10:37 .
 drwxrwsr-x  4 nagios nagios 4,0K nov.  23 10:37 var
 ```
+
 ##### Installez le service Nagios
+
 Ensuite, vous allez installer le service Nagios, c’est-à-dire les composants nécessaires au démarrage de Nagios avec la machine. Lancez la commande suivante :
+
 ```shell
 make install-daemoninit
 ```
+
 Cette commande vous retournera :
+
 ```shell
 /usr/bin/install -c -m 755 -d -o root -g root /lib/systemd/system
 /usr/bin/install -c -m 755 -o root -g root startup/default-service /lib/systemd/system/nagios.service
 Created symlink /etc/systemd/system/multi-user.target.wants/nagios.service → /lib/systemd/system/nagios.service.
 *** Init script installed ***
 ```
+
 Vous pouvez ici constater la création du fichier de service unit `nagios.service` dans l’arborescence de `systemd`. Ainsi que la création du lien symbolique dans la « target multi-user », afin de démarrer le service automatiquement avec le système.
+
 ##### Installez le pipe de Nagios
+
 Etape suivante : installer le **pipe** de Nagios. Lancez la commande suivante :
+
 ```shell
 make install-commandmode
 ```
+
 Observez le résultat de cette commande :
+
 ```console
 /usr/bin/install -c -m 775 -o nagios -g nagcmd -d /usr/local/nagios/var/rw
 chmod g+s /usr/local/nagios/var/rw
 *** External command directory configured ***
 ```
+
 Vous pouvez notamment constater qu’un répertoire `**rw**` a été créé dans l’arborescence Nagios. Les droits de lecture et d’écriture sont attribués à l’utilisateur `nagios` et au groupe `nagcmd` (que vous avez indiqué lors de l’exécution du script `configure`).
 Par ailleurs la présence du **sticky bit** (via la commande `chmod g+s`) permet de distribuer l’ID du groupe `nagcmd` à tous les fichiers et répertoires qui seraient créés dans ce répertoire `rw`. Vous verrez un peu plus loin dans le cours que, lorsque Nagios se lance, ce dernier crée justement son « **pipe** » de commandes dans ce répertoire. Je vous donne rendez-vous dans le chapitre 4 de cette partie pour illustrer complètement le fonctionnement de ce « **pipe** ».
+
 ##### Installez les fichiers de configuration de Nagios
+
 Pour installer les fichiers de configuration de base de Nagios, lancez la commande suivante :
+
 ```shell
 make install-config
 ```
+
 Le résultat de cette commande indique la liste des fichiers de configuration déposée dans l’arborescence, comme ci-dessous :
+
 ```console
 /usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/etc
 /usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/etc/objects
@@ -301,37 +318,48 @@ Le résultat de cette commande indique la liste des fichiers de configuration d�
 /usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/printer.cfg /usr/local/nagios/etc/objects/printer.cfg
 /usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/switch.cfg /usr/local/nagios/etc/objects/switch.cfg
 ```
+
 ##### Installez l'interface Webd'administration
+
 Pour installer l’interface Web d’administration de Nagios, lancez la commande suivante :
+
 ```shell
 make install-webconf
 ```
+
 Cette commande dépose le fichier `nagios.conf` dans l’arborescence Apache (`/etc/apache2/sites-enabled`). Pour fonctionner correctement, l’interface d’administration de Nagios nécessite les modules `rewrite` et `cgi` d’Apache. Pour les activer, lancez les commandes suivantes :
 ```console
 a2enmod rewrite
 a2enmod cgi
 ```
 Ces commandes vous demandent de redémarrer le service Apache afin d’être prises en compte. Mais vous allez retarder cette instruction, car vous n’en avez pas encore terminé avec la configuration de Nagios.
+
 ##### Configurez l'accès Apache
+
 Pour accéder à l’interface d’administration de Nagios, il est nécessaire de configurer un accès Apache **htaccess**. Lancez la commande suivante :
+
 ```shell
 htpasswd -cb /usr/local/nagios/etc/htpasswd.users nagiosadmin pass
 ```
+
 Cette commande crée le fichier `htaccess` dans l’arborescence du site d’administration (`/usr/local/nagios/etc/htpasswd.users`) et configure un premier utilisateur comme ci-dessous :
 - **login : nagiosadmin** ;
 - **password : pass** (encore une fois, ce mot de passe est à renforcer dans un contexte de production).
+
 ##### Configurez les droits pour la configuration
 La configuration Nagios s’effectuera directement avec le compte **nagios**, **pas besoin d’être root** pour cela. Il faut tout de même attribuer les droits sur l’arborescence Nagios à l’utilisateur **nagios**. Pour ce faire, lancez la commande suivante :
 ```shell
 root@NagiosDebian:~# chown -R nagios:nagcmd /usr/local/nagios
 ```
 Cette commande attribue, de manière récursive, la propriété à l’utilisateur `nagios` et au groupe `nagcmd` de l’arborescence Nagios (`/usr/local/nagios`).
+
 ##### Redémarrez Apache
 Dernières opérations : il faut redémarrer le service Apache et démarrer le service Nagios. Pour cela, lancez les commandes suivantes :
 ```shell
 systemctl restart apache2
 systemctl start nagios
 ```
+
 Si tout se passe bien, ces deux commandes ne renvoient rien en sortie standard.
 **Bravo ! Vous venez d’installer Nagios Core sur une machine GNU/Linux Debian.**
 Pour vérifier que Nagios tourne, lancez la commande suivante :
@@ -421,7 +449,7 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0xMTM2MDU5NzIwLC
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0xODk3MTkzMTgwLC
 0yMDEwMzMxOTczLC0xMTc3MzY3OTUwLDc3MDk4MzUwMiw5ODI2
 NDM2NDYsMzM0MTk5NDcwLDE0OTc5NTMyOCwtMjEwNzgwNTc4Ny
 wtMTI1MTYwNTU2OCwyMDI4MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1
