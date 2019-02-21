@@ -52,25 +52,7 @@ Nagios nécessite également quelques librairies graphiques :
 apt-get install libpng-dev libjpeg-dev libgd-dev
 ```
 
-Cette commande va installer les packages suivants :
-
-```console
-libdpkg-perl libexpat1-dev libfile-fcntllock-perl libfontconfig1-dev libfreetype6-dev libice-dev libice6 libjbig-dev
-libjpeg62-turbo-dev liblzma-dev libpng-tools libpthread-stubs0-dev libsm-dev libsm6 libtiff5-dev libtiffxx5 libvpx-dev libvpx4
-libx11-dev libx11-doc libxau-dev libxcb1-dev libxdmcp-dev libxpm-dev libxt-dev libxt6 pkg-config x11-common x11proto-core-dev
-x11proto-input-dev x11proto-kb-dev xorg-sgml-doctools xtrans-dev zlib1g-dev
-
-Paquets suggérés :
-
-debian-keyring patch libice-doc liblzma-doc libsm-doc libxcb-doc libxt-doc
-
-Les NOUVEAUX paquets suivants seront installés :
-
-libdpkg-perl libexpat1-dev libfile-fcntllock-perl libfontconfig1-dev libfreetype6-dev libgd-dev libice-dev libice6 libjbig-dev
-libjpeg-dev libjpeg62-turbo-dev liblzma-dev libpng-dev libpng-tools libpthread-stubs0-dev libsm-dev libsm6 libtiff5-dev libtiffxx5
-libvpx-dev libvpx4 libx11-dev libx11-doc libxau-dev libxcb1-dev libxdmcp-dev libxpm-dev libxt-dev libxt6 pkg-config x11-common
-x11proto-core-dev x11proto-input-dev x11proto-kb-dev xorg-sgml-doctools xtrans-dev zlib1g-dev
-```
+Cette commande va installer les packages suivants : //TODO ajouter logs
 
 ##### Installez les outils de compilation standards
 Enfin pour installer Nagios et ses plugins vous aurez besoin des outils de compilation standards et du package unzip :
@@ -81,21 +63,8 @@ En effet, Nagios est un programme compilé en C, donc le compilateur GCC et ses 
 apt-get install gcc make autoconf libc6 unzip
 ```
 
-Cette commande va installer les packages suivants :
+Cette commande va installer les packages suivants : //TODO ajouter logs 4
 
-```console
-binutils cpp cpp-6 gcc-6 libasan3 libatomic1 libcc1-0 libcilkrts5 libgcc-6-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpfr4 libmpx2 libquadmath0 libtsan0 libubsan0
-
-Paquets suggérés :
-
-binutils-doc cpp-doc gcc-6-locales gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-6-multilib gcc-6-doc libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan3-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx2-dbg libquadmath0-dbg
-
-make-doc
-
-Les NOUVEAUX paquets suivants seront installés :
-
-binutils cpp cpp-6 gcc gcc-6 libasan3 libatomic1 libcc1-0 libcilkrts5 libgcc-6-dev libgomp1 libisl15 libitm1 liblsan0 libmpc3 libmpfr4 libmpx2 libquadmath0 libtsan0 libubsan0 make unzip
-```
 ##### Créez l'environnement Nagios
 Il vous reste juste quelques ajouts d’ordre administratif à effectuer. Et notamment la **création de l’environnement Nagios**, avec son utilisateur, son groupe et son répertoire de travail.
 
@@ -490,9 +459,9 @@ BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIxMTgsImVuZCI6MjI1
 OX0sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
 BvdXIgaW5zdGFsbGVyIE5hZ2lvcyBldCBzZXMgcGx1Z2lucyB2
 b3VzIGF1cmV6IGJlc29pbiBkZXMgb3V0aWxzIGRlIGNvbXDigK
-YiLCJzdGFydCI6NDAwNSwiZW5kIjo0MTIzfSwiQTZRYW9RbVJ5
+YiLCJzdGFydCI6MjkzNywiZW5kIjozMDU1fSwiQTZRYW9RbVJ5
 QmdvYlBKdyI6eyJ0ZXh0IjoidXRpbGlzYXRldXIiLCJzdGFydC
-I6NTM3MywiZW5kIjo1Mzg0fX0sImNvbW1lbnRzIjp7IlROc3ZF
+I6MzYwMSwiZW5kIjozNjEyfX0sImNvbW1lbnRzIjp7IlROc3ZF
 MEFmZFF5aTRIVlMiOnsiZGlzY3Vzc2lvbklkIjoibVJOYm5XdE
 FuOEtkeElnQSIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEz
 NTMzOCIsInRleHQiOiJFc3QpY2UgcXVlIHR1IHBlbnNlcyBxdW
@@ -521,10 +490,10 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0xNzE0NjQ2NDQ2LC
-0xMTc3MzY3OTUwLDc3MDk4MzUwMiw5ODI2NDM2NDYsMzM0MTk5
-NDcwLDE0OTc5NTMyOCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OC
-wyMDI4MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQx
-MDA2MDEsMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyOD
-UsMTA4NzEzODA2N119
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy01MzU3ODY3NjYsLT
+ExNzczNjc5NTAsNzcwOTgzNTAyLDk4MjY0MzY0NiwzMzQxOTk0
+NzAsMTQ5Nzk1MzI4LC0yMTA3ODA1Nzg3LC0xMjUxNjA1NTY4LD
+IwMjgxMzgzODYsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEw
+MDYwMSwxMzQwMDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NS
+wxMDg3MTM4MDY3XX0=
 -->
