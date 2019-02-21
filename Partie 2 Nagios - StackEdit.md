@@ -76,7 +76,7 @@ Cette commande va installer les packages suivants : //TODO ajouter logs 4
 
 Il vous reste juste quelques ajouts d’ordre administratif à effectuer… et notamment, la **création de l’environnement Nagios**, avec son utilisateur, son groupe et son répertoire de travail.
 En effet, Nagios est un programme qui n'a pas besoin de tourner sous root.
-Pour ajouter l’utilisateur **`nagios`** sur le système, saisissez la commande suivante :
+Pour ajouter l’utilisateur `nagios` sur le système, saisissez la commande suivante :
 
 ```shell
 useradd -m -p $(openssl passwd nagios) nagios
@@ -290,7 +290,7 @@ chmod g+s /usr/local/nagios/var/rw
 *** External command directory configured ***
 ```
 
-Vous pouvez notamment constater qu’un répertoire `**rw**` a été créé dans l’arborescence Nagios. Les droits de lecture et d’écriture sont attribués à l’utilisateur `nagios` et au groupe `nagcmd` (que vous avez indiqué lors de l’exécution du script `configure`).
+Vous pouvez notamment constater qu’un répertoire `rw` a été créé dans l’arborescence Nagios. Les droits de lecture et d’écriture sont attribués à l’utilisateur `nagios` et au groupe `nagcmd` (que vous avez indiqué lors de l’exécution du script `configure`).
 Par ailleurs la présence du **sticky bit** (via la commande `chmod g+s`) permet de distribuer l’ID du groupe `nagcmd` à tous les fichiers et répertoires qui seraient créés dans ce répertoire `rw`. Vous verrez un peu plus loin dans le cours que, lorsque Nagios se lance, ce dernier crée justement son « **pipe** » de commandes dans ce répertoire. Je vous donne rendez-vous dans le chapitre 4 de cette partie pour illustrer complètement le fonctionnement de ce « **pipe** ».
 
 ##### Installez les fichiers de configuration de Nagios
@@ -381,7 +381,7 @@ Debian 9 étant sous **systemd**, vous pouvez aussi lancer la commande suivante 
 ```shell
 systemctl status nagios
 ```
-Le retour de cette commande est complet, car il permet non seulement de s’assurer que le service a bien pour statut `**active**`, mais aussi de consulter les dernières lignes des fichiers de traces du service Nagios. En l’occurrence, vous devriez obtenir quelque chose comme :
+Le retour de cette commande est complet, car il permet non seulement de s’assurer que le service a bien pour statut `active`, mais aussi de consulter les dernières lignes des fichiers de traces du service Nagios. En l’occurrence, vous devriez obtenir quelque chose comme :
 ```console
 wproc: early_timeout=0; exited_ok=1; wait_status=32512; error_code=0;
 wproc: stderr line 01: /bin/sh: 1: /bin/mail: not found
@@ -453,7 +453,7 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6WzE0NTY1MjE0OTQsLT
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6WzEwNDI1MDA1MDIsLT
 IwMTAzMzE5NzMsLTExNzczNjc5NTAsNzcwOTgzNTAyLDk4MjY0
 MzY0NiwzMzQxOTk0NzAsMTQ5Nzk1MzI4LC0yMTA3ODA1Nzg3LC
 0xMjUxNjA1NTY4LDIwMjgxMzgzODYsMTM4NjIxNDYyNyw0NDU2
