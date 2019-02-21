@@ -33,7 +33,7 @@ Pour accéder à l’interface web de gestion de Nagios, vous avez besoin d’un
 ```shell 
 apt-get install apache2 php php-gd php-imap php-curl php-mcrypt
 ```
-Cette commande va installer les packages suivants : //TODO ajouter logs
+Cette commande va installer les packages suivants : //TODO ajouter logs 1
 
 ##### Installez les librairies Perl
 Pour exploiter au maximum les possibilités offertes par les plugins de Nagios, vous avez besoin de quelques librairies Perl supplémentaires :
@@ -43,7 +43,7 @@ apt-get install libxml-libxml-perl libnet-snmp-perl libperl-dev libnumber-format
 ```
 Vous pourrez noter par exemple les librairies perl SNMP. En effet sans l'inclusion de ces librairies, le plugin SNMP de Nagios ne pourra pas fonctionner !
 
-Cette commande va installer les packages suivants : //TODO ajouter Logs
+Cette commande va installer les packages suivants : //TODO ajouter Logs 2
 
 ##### Installez les librairies graphiques
 Nagios nécessite également quelques librairies graphiques :
@@ -52,7 +52,7 @@ Nagios nécessite également quelques librairies graphiques :
 apt-get install libpng-dev libjpeg-dev libgd-dev
 ```
 
-Cette commande va installer les packages suivants : //TODO ajouter logs
+Cette commande va installer les packages suivants : //TODO ajouter logs 3
 
 ##### Installez les outils de compilation standards
 Enfin pour installer Nagios et ses plugins vous aurez besoin des outils de compilation standards et du package unzip :
@@ -317,23 +317,7 @@ Pour installer les fichiers de configuration de base de Nagios, lancez la comman
 make install-config
 ```
 
-Le résultat de cette commande indique la liste des fichiers de configuration déposés dans l’arborescence telle que :
-
-```console
-/usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/etc
-/usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/etc/objects
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/nagios.cfg /usr/local/nagios/etc/nagios.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/cgi.cfg /usr/local/nagios/etc/cgi.cfg
-/usr/bin/install -c -b -m 660 -o nagios -g nagios sample-config/resource.cfg /usr/local/nagios/etc/resource.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/templates.cfg /usr/local/nagios/etc/objects/templates.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/commands.cfg /usr/local/nagios/etc/objects/commands.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/contacts.cfg /usr/local/nagios/etc/objects/contacts.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/timeperiods.cfg /usr/local/nagios/etc/objects/timeperiods.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/localhost.cfg /usr/local/nagios/etc/objects/localhost.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/windows.cfg /usr/local/nagios/etc/objects/windows.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/printer.cfg /usr/local/nagios/etc/objects/printer.cfg
-/usr/bin/install -c -b -m 664 -o nagios -g nagios sample-config/template-object/switch.cfg /usr/local/nagios/etc/objects/switch.cfg
-```
+Le résultat de cette commande indique la liste des fichiers de configuration déposés dans l’arborescence.
 
 ##### Installez l'interface d'administration Web
 Pour installer l’interface d’administration Web de Nagios, lancez la commande suivante :
@@ -455,13 +439,13 @@ La seconde étape consiste justement à **compiler et installer les plugins**. C
 eyJkaXNjdXNzaW9ucyI6eyJtUk5ibld0QW44S2R4SWdBIjp7In
 RleHQiOiJQb3VyIGV4cGxvaXRlciBhdSBtYXhpbXVtIGxlcyBw
 b3NzaWJpbGl0w6lzIG9mZmVydGVzIHBhciBsZXMgcGx1Z2lucy
-BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIxMTgsImVuZCI6MjI1
-OX0sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
+BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIxMjAsImVuZCI6MjI2
+MX0sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
 BvdXIgaW5zdGFsbGVyIE5hZ2lvcyBldCBzZXMgcGx1Z2lucyB2
 b3VzIGF1cmV6IGJlc29pbiBkZXMgb3V0aWxzIGRlIGNvbXDigK
-YiLCJzdGFydCI6MjkzNywiZW5kIjozMDU1fSwiQTZRYW9RbVJ5
+YiLCJzdGFydCI6Mjk0MywiZW5kIjozMDYxfSwiQTZRYW9RbVJ5
 QmdvYlBKdyI6eyJ0ZXh0IjoidXRpbGlzYXRldXIiLCJzdGFydC
-I6MzYwMSwiZW5kIjozNjEyfX0sImNvbW1lbnRzIjp7IlROc3ZF
+I6MzYwNywiZW5kIjozNjE4fX0sImNvbW1lbnRzIjp7IlROc3ZF
 MEFmZFF5aTRIVlMiOnsiZGlzY3Vzc2lvbklkIjoibVJOYm5XdE
 FuOEtkeElnQSIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEz
 NTMzOCIsInRleHQiOiJFc3QpY2UgcXVlIHR1IHBlbnNlcyBxdW
@@ -490,7 +474,7 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy01MzU3ODY3NjYsLT
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy05Nzc5ODQ5OTYsLT
 ExNzczNjc5NTAsNzcwOTgzNTAyLDk4MjY0MzY0NiwzMzQxOTk0
 NzAsMTQ5Nzk1MzI4LC0yMTA3ODA1Nzg3LC0xMjUxNjA1NTY4LD
 IwMjgxMzgzODYsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEw
