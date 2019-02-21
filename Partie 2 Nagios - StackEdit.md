@@ -366,7 +366,9 @@ Pour vérifier que Nagios tourne, lancez la commande suivante :
 ```shell
 ps -edf | grep nagios
 ```
+
 Parmi les lignes résultat, vous devriez trouver celles-ci :
+
 ```console
 nagios 29558 1  0 11:04 ?  00:00:00 /usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg
 nagios 29559 29558  0 11:04 ?  00:00:00 /usr/local/nagios/bin/nagios --worker /usr/local/nagios/var/rw/nagios.qh
@@ -388,6 +390,7 @@ SERVICE ALERT: localhost;Swap Usage;CRITICAL;HARD;1;(No output on stdout) stde
 SERVICE ALERT: localhost;Total Processes;CRITICAL;HARD;1;(No output on stdout)
 ```
 Diantre ! Il semblerait que Nagios envoie déjà quelques alertes de supervision !
+
 #### Connectez-vous une première fois à l’interface d’administration de Nagios
 Allez immédiatement vérifier cet état de fait en consultant l’interface d’administration de Nagios. Pour cela, ouvrez un navigateur et connectez-vous sur l’adresse IP de votre serveur Nagios via une URL du type :
 http://@ipServeurNagios/nagios (par exemple http://172.16.10.10/nagios).
@@ -402,6 +405,7 @@ Profitez de ce premier accès à l’interface Nagios pour cliquer sur le « Ale
 Aïe ! Effectivement, Nagios relève déjà quelques soucis. Mais en observant un peu mieux la description de ces lignes, vous pourrez observer qu’elles ont toutes une cause commune :
 **[SCREENSHOT : 2.1-12_NoSuchFileOrDirectory ]**
 Et la cause commune de ces erreurs est simple : Nagios cherche des fichiers qui n’existent pas dans son arborescence. C’est normal, ces fichiers sont les **plugins** standards de Nagios, que nous n'avons pas encore installés.
+
 #### En résumé
 Dans ce chapitre, nous avons vu ensemble la première étape de l'installation de Nagios Core, c’est-à-dire :
 - la préparation de son serveur d'hébergement ; 
@@ -449,7 +453,7 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0xODk3MTkzMTgwLC
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0xNjIzNzYyNTI0LC
 0yMDEwMzMxOTczLC0xMTc3MzY3OTUwLDc3MDk4MzUwMiw5ODI2
 NDM2NDYsMzM0MTk5NDcwLDE0OTc5NTMyOCwtMjEwNzgwNTc4Ny
 wtMTI1MTYwNTU2OCwyMDI4MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1
