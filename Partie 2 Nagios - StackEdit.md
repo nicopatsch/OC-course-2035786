@@ -189,7 +189,7 @@ Pour obtenir de la documentation sur la **version Core de Nagios** et notamment 
 
 **[SCREENSHOT : 2.1-6_NagiosCoreInstallationDebianDocumentationLink ]**
 
-Vous pouvez maintenant continuer le processus de téléchargement des sources et cliquer sur le bouton `Download`. Vous arrivez désormais sur un pop-in vous invitant de manière facultative à laisser vos coordonnées à Nagios afin de vous tenir au courant des évolutions de leurs produits via une liste de diffusion.
+Vous pouvez maintenant continuer le processus de téléchargement des sources et cliquer sur le bouton `Download`. Vous arrivez alors sur un *pop-in*, qui vous propose de donner vos coordonnées si vous souhaitez être informé des évolutions des produits Nagios.
 
 **[SCREENSHOT : 2.1-7_NagiosMailingList ]**
 
@@ -560,10 +560,10 @@ ZXIuIEEgcXVvaSBzZXJ0LWlsID8gUXVlIHJlcHLDqXNlbnRlLX
 QtaWwgPyBJbCBtZSBzZW1ibGUgcXXigJlpbCBmYXVkcmFpdCBi
 aWVuIGTDqWZpbmlyIGNlIGNvbmNlcHQgYXZhbnQgZGUgY29udG
 ludWVyLiBRdeKAmWVuIHBlbnNlcy10dSA/IiwiY3JlYXRlZCI6
-MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbLTIwMzI0NjQ5OD
-gsNzcwOTgzNTAyLDk4MjY0MzY0NiwzMzQxOTk0NzAsMTQ5Nzk1
-MzI4LC0yMTA3ODA1Nzg3LC0xMjUxNjA1NTY4LDIwMjgxMzgzOD
-YsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEwMDYwMSwxMzQw
-MDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NSwxMDg3MTM4MD
-Y3XX0=
+MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbMTMyNDA0NDUyMC
+w3NzA5ODM1MDIsOTgyNjQzNjQ2LDMzNDE5OTQ3MCwxNDk3OTUz
+MjgsLTIxMDc4MDU3ODcsLTEyNTE2MDU1NjgsMjAyODEzODM4Ni
+wxMzg2MjE0NjI3LDQ0NTYxNTIzMCwtOTY0MTAwNjAxLDEzNDAw
+MTMxMTEsLTEwMDM1MzM5MTYsODM4NTU3Mjg1LDEwODcxMzgwNj
+ddfQ==
 -->
