@@ -2,36 +2,42 @@
 
 ### Chapitre 2.1. Installez Nagios Core sur votre serveur Debian
 
-Maintenant que vous avez connaissance des problématiques de supervision, des différents acteurs sur le marché ainsi que des avantages et inconvénients de faire le choix de la solution Nagios, je vous retrouve donc dans ce chapitre avec l’objectif d’installer Nagios Core depuis les sources sur un système GNU/Linux. Ce processus peut se détailler en 4 grandes étapes :
+Maintenant que vous avez connaissance des problématiques de supervision, des différents acteurs sur le marché ainsi que des avantages et inconvénients de la solution Nagios, je vous retrouve donc dans ce chapitre pour installer Nagios Core sur un système GNU/Linux depuis les sources. Ce processus peut se détailler en quatre grandes étapes :
 
--   La **préparation du serveur** à héberger le service Nagios ;
--   Le **téléchargement et la compilation des sources** Nagios ;
--   L’installation de **l’arborescence** Nagios ;
--   Le vérification de la connexion à **l’interface d’administration** de Nagios.
+- la **préparation du serveur**, qui va héberger le service Nagios ;
+
+- le **téléchargement et la compilation des sources** Nagios ;
+
+- l’installation de **l’arborescence** Nagios ;
+
+- la vérification de la connexion à **l’interface d’administration** de Nagios.
 
 #### Préparez votre serveur Debian à recevoir Nagios
 
-La machine cible de l’installation de Nagios est une **Debian Stretch 9.6.0** en version minimale disponible au téléchargement directement depuis le site de Debian. Par exemple, pour une architecture amd64 [
-disponible ici](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso).
+La machine cible est une **Debian Stretch 9.6.0** en version minimale, disponible au téléchargement directement sur le site de Debian.Voici, par exemple, pour une architecture amd64 [disponible ici](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso).
 
-**[SCREENSHOT : 2.1-1_ImageMinimaleDebian ]**
+**[SCREENSHOT : 2.1-1_ImageMinimaleDebian]**
 
-Pendant le processus d’installation, je vous propose dans un premier temps de ne sélectionner que les composants minimums au système, à savoir :
+Pendant le processus d’installation, je vous propose dans un premier temps de ne sélectionner que le minimum requis, à savoir :
 
--   Le **serveur SSH** pour se connecter via un terminal distant ;
--   Les **composants usuels** du systèmes qui contiennent les librairies C les plus communément employées.
+- le **serveur SSH**, pour se connecter via un terminal distant ;
+
+- les **composants usuels** du système, qui contiennent les librairies C les plus communément employées.
 
 **[SCREENSHOT : 2.1-2_InstallMinimaleDebian ]**
 
-Nagios nécessite quelques packages supplémentaires sur cette installation minimale afin de profiter pleinement de toutes ses capacités.
+Quelques packages supplémentaires sont nécessaires afin de profiter pleinement de toutes les capacités de Nagios.
 
-Vous allez donc installer quelques dépendances via diverses commandes que je vous présente dans la suite.
+Vous allez donc installer quelques dépendances via diverses commandes que je vous présenterai par la suite.
 
 ##### Installez le serveur Apache
-Pour accéder à l’interface web de gestion de Nagios, vous avez besoin d’un serveur apache et de l’interpréteur PHP.
 
-```shell 
+Pour accéder à l’interface Web de gestion de Nagios, vous avez besoin d’un serveur Apache et de l’interpréteur PHP.
+
+```shell
+
 apt-get install apache2 php php-gd php-imap php-curl php-mcrypt
+
 ```
 Cette commande va installer les packages suivants : //TODO ajouter logs 1
 
@@ -439,13 +445,13 @@ La seconde étape consiste justement à **compiler et installer les plugins**. C
 eyJkaXNjdXNzaW9ucyI6eyJtUk5ibld0QW44S2R4SWdBIjp7In
 RleHQiOiJQb3VyIGV4cGxvaXRlciBhdSBtYXhpbXVtIGxlcyBw
 b3NzaWJpbGl0w6lzIG9mZmVydGVzIHBhciBsZXMgcGx1Z2lucy
-BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIxMjAsImVuZCI6MjI2
-MX0sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
+BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIwMzIsImVuZCI6MjE3
+M30sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
 BvdXIgaW5zdGFsbGVyIE5hZ2lvcyBldCBzZXMgcGx1Z2lucyB2
 b3VzIGF1cmV6IGJlc29pbiBkZXMgb3V0aWxzIGRlIGNvbXDigK
-YiLCJzdGFydCI6Mjk0MywiZW5kIjozMDYxfSwiQTZRYW9RbVJ5
+YiLCJzdGFydCI6Mjg1NSwiZW5kIjoyOTczfSwiQTZRYW9RbVJ5
 QmdvYlBKdyI6eyJ0ZXh0IjoidXRpbGlzYXRldXIiLCJzdGFydC
-I6MzYwNywiZW5kIjozNjE4fX0sImNvbW1lbnRzIjp7IlROc3ZF
+I6MzUxOSwiZW5kIjozNTMwfX0sImNvbW1lbnRzIjp7IlROc3ZF
 MEFmZFF5aTRIVlMiOnsiZGlzY3Vzc2lvbklkIjoibVJOYm5XdE
 FuOEtkeElnQSIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEz
 NTMzOCIsInRleHQiOiJFc3QpY2UgcXVlIHR1IHBlbnNlcyBxdW
@@ -474,10 +480,10 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy05Nzc5ODQ5OTYsLT
-ExNzczNjc5NTAsNzcwOTgzNTAyLDk4MjY0MzY0NiwzMzQxOTk0
-NzAsMTQ5Nzk1MzI4LC0yMTA3ODA1Nzg3LC0xMjUxNjA1NTY4LD
-IwMjgxMzgzODYsMTM4NjIxNDYyNyw0NDU2MTUyMzAsLTk2NDEw
-MDYwMSwxMzQwMDEzMTExLC0xMDAzNTMzOTE2LDgzODU1NzI4NS
-wxMDg3MTM4MDY3XX0=
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0yMDEwMzMxOTczLC
+0xMTc3MzY3OTUwLDc3MDk4MzUwMiw5ODI2NDM2NDYsMzM0MTk5
+NDcwLDE0OTc5NTMyOCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OC
+wyMDI4MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQx
+MDA2MDEsMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyOD
+UsMTA4NzEzODA2N119
 -->
