@@ -33,7 +33,8 @@ Pour accéder à l’interface web de gestion de Nagios, vous avez besoin d’un
 ```shell 
 apt-get install apache2 php php-gd php-imap php-curl php-mcrypt
 ```
-Cette commande va installer les packages suivants : 
+Cette commande va installer les packages suivants : //TODO ajouter logs
+
 ##### Installez les librairies Perl
 Pour exploiter au maximum les possibilités offertes par les plugins de Nagios, vous avez besoin de quelques librairies Perl supplémentaires :
 
@@ -42,31 +43,7 @@ apt-get install libxml-libxml-perl libnet-snmp-perl libperl-dev libnumber-format
 ```
 Vous pourrez noter par exemple les librairies perl SNMP. En effet sans l'inclusion de ces librairies, le plugin SNMP de Nagios ne pourra pas fonctionner !
 
-Cette commande va installer les packages suivants :
-
-```console
-libalgorithm-c3-perl libauthen-sasl-perl libb-hooks-endofscope-perl libc-dev-bin libc6-dev libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl libclass-method-modifiers-perl libclass-singleton-perl libdata-optlist-perl libdatetime-locale-perl
-libdatetime-timezone-perl libdevel-caller-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdigest-hmac-perl libencode-locale-perl libeval-closure-perl libexception-class-perl libfile-listing-perl libfont-afm-perl libhtml-form-perl libhtml-format-perl
-libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libio-html-perl libio-socket-inet6-perl libio-socket-ssl-perl liblwp-mediatypes-perl liblwp-protocol-https-perl
-libmailtools-perl libmodule-implementation-perl libmodule-runtime-perl libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnet-http-perl libnet-ip-perl libnet-smtp-ssl-perl libnet-ssleay-perl libpackage-stash-perl libpackage-stash-xs-perl
-libpadwalker-perl libparams-classify-perl libparams-util-perl libparams-validationcompiler-perl librole-tiny-perl libscalar-list-utils-perl libsocket6-perl libspecio-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl
-libsub-name-perl libtest-fatal-perl libtimedate-perl libtry-tiny-perl liburi-perl libvariable-magic-perl libwww-perl libwww-robotrules-perl libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl linux-libc-dev manpages-dev
-perl-openssl-defaults
-
-Paquets suggérés :
-
-libgssapi-perl glibc-doc libdata-dump-perl libcrypt-ssleay-perl libcrypt-des-perl libscalar-number-perl libauthen-ntlm-perl
-
-Les NOUVEAUX paquets suivants seront installés :
-
-libalgorithm-c3-perl libauthen-sasl-perl libb-hooks-endofscope-perl libc-dev-bin libc6-dev libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl libclass-method-modifiers-perl libclass-singleton-perl libconfig-inifiles-perl libdata-optlist-perl
-libdatetime-locale-perl libdatetime-perl libdatetime-timezone-perl libdevel-caller-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdigest-hmac-perl libencode-locale-perl libeval-closure-perl libexception-class-perl libfile-listing-perl libfont-afm-perl
-libhtml-form-perl libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libio-html-perl libio-socket-inet6-perl libio-socket-ssl-perl
-liblwp-mediatypes-perl liblwp-protocol-https-perl libmailtools-perl libmodule-implementation-perl libmodule-runtime-perl libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnet-dns-perl libnet-http-perl libnet-ip-perl libnet-smtp-ssl-perl
-libnet-snmp-perl libnet-ssleay-perl libnumber-format-perl libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl libparams-classify-perl libparams-util-perl libparams-validationcompiler-perl libperl-dev librole-tiny-perl libscalar-list-utils-perl libsocket6-perl
-libspecio-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl libsub-name-perl libtest-fatal-perl libtimedate-perl libtry-tiny-perl liburi-perl libvariable-magic-perl libwww-perl libwww-robotrules-perl libxml-libxml-perl
-libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl linux-libc-dev manpages-dev perl-openssl-defaults autoconf automake autotools-dev libsigsegv2 m4
-```
+Cette commande va installer les packages suivants : //TODO ajouter Logs
 
 ##### Installez les librairies graphiques
 Nagios nécessite également quelques librairies graphiques :
@@ -509,13 +486,13 @@ La seconde étape consiste justement à **compiler et installer les plugins**. C
 eyJkaXNjdXNzaW9ucyI6eyJtUk5ibld0QW44S2R4SWdBIjp7In
 RleHQiOiJQb3VyIGV4cGxvaXRlciBhdSBtYXhpbXVtIGxlcyBw
 b3NzaWJpbGl0w6lzIG9mZmVydGVzIHBhciBsZXMgcGx1Z2lucy
-BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIwOTgsImVuZCI6MjIz
+BkZSBOYWdpb3Ms4oCmIiwic3RhcnQiOjIxMTgsImVuZCI6MjI1
 OX0sIm1EUWVudDZnT3NiWHdSb2wiOnsidGV4dCI6IkVuZmluIH
 BvdXIgaW5zdGFsbGVyIE5hZ2lvcyBldCBzZXMgcGx1Z2lucyB2
 b3VzIGF1cmV6IGJlc29pbiBkZXMgb3V0aWxzIGRlIGNvbXDigK
-YiLCJzdGFydCI6NzU3OSwiZW5kIjo3Njk3fSwiQTZRYW9RbVJ5
+YiLCJzdGFydCI6NDAwNSwiZW5kIjo0MTIzfSwiQTZRYW9RbVJ5
 QmdvYlBKdyI6eyJ0ZXh0IjoidXRpbGlzYXRldXIiLCJzdGFydC
-I6ODk0NywiZW5kIjo4OTU4fX0sImNvbW1lbnRzIjp7IlROc3ZF
+I6NTM3MywiZW5kIjo1Mzg0fX0sImNvbW1lbnRzIjp7IlROc3ZF
 MEFmZFF5aTRIVlMiOnsiZGlzY3Vzc2lvbklkIjoibVJOYm5XdE
 FuOEtkeElnQSIsInN1YiI6ImdvOjEwMjEyMTAyMDI5NTY5OTEz
 NTMzOCIsInRleHQiOiJFc3QpY2UgcXVlIHR1IHBlbnNlcyBxdW
@@ -544,10 +521,10 @@ LiBBIHF1b2kgc2VydC1pbCA/IFF1ZSByZXByw6lzZW50ZS10LW
 lsID8gSWwgbWUgc2VtYmxlIHF14oCZaWwgZmF1ZHJhaXQgYmll
 biBkw6lmaW5pciBjZSBjb25jZXB0IGF2YW50IGRlIGNvbnRpbn
 Vlci4gUXXigJllbiBwZW5zZXMtdHUgPyIsImNyZWF0ZWQiOjE1
-NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wzk3ODY1NzcwMiwtMT
-E3NzM2Nzk1MCw3NzA5ODM1MDIsOTgyNjQzNjQ2LDMzNDE5OTQ3
-MCwxNDk3OTUzMjgsLTIxMDc4MDU3ODcsLTEyNTE2MDU1NjgsMj
-AyODEzODM4NiwxMzg2MjE0NjI3LDQ0NTYxNTIzMCwtOTY0MTAw
-NjAxLDEzNDAwMTMxMTEsLTEwMDM1MzM5MTYsODM4NTU3Mjg1LD
-EwODcxMzgwNjddfQ==
+NDQ1NDYxNzYwOTV9fSwiaGlzdG9yeSI6Wy0xNzE0NjQ2NDQ2LC
+0xMTc3MzY3OTUwLDc3MDk4MzUwMiw5ODI2NDM2NDYsMzM0MTk5
+NDcwLDE0OTc5NTMyOCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OC
+wyMDI4MTM4Mzg2LDEzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQx
+MDA2MDEsMTM0MDAxMzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyOD
+UsMTA4NzEzODA2N119
 -->
