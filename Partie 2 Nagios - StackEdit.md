@@ -138,7 +138,7 @@ binutils cpp cpp-6 gcc gcc-6 libasan3 libatomic1 libcc1-0 libcilkrts5 libgcc-6-d
 ##### Créez l'environnement Nagios
 Il vous reste juste quelques ajouts d’ordre administratif à effectuer. Et notamment la **création de l’environnement Nagios**, avec son utilisateur, son groupe et son répertoire de travail.
 
-Car Nagios est un programme qui n'a pas besoin de tourner sous root. Donc par mesure de sécurité, il est 
+Car Nagios est un programme qui n'a pas besoin de tourner sous root. 
 
 Pour ajouter l’utilisateur **`nagios`** sur le système, saisissez la commande suivante :
 
@@ -560,10 +560,10 @@ ZXIuIEEgcXVvaSBzZXJ0LWlsID8gUXVlIHJlcHLDqXNlbnRlLX
 QtaWwgPyBJbCBtZSBzZW1ibGUgcXXigJlpbCBmYXVkcmFpdCBi
 aWVuIGTDqWZpbmlyIGNlIGNvbmNlcHQgYXZhbnQgZGUgY29udG
 ludWVyLiBRdeKAmWVuIHBlbnNlcy10dSA/IiwiY3JlYXRlZCI6
-MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbMTMyNDA0NDUyMC
-w3NzA5ODM1MDIsOTgyNjQzNjQ2LDMzNDE5OTQ3MCwxNDk3OTUz
-MjgsLTIxMDc4MDU3ODcsLTEyNTE2MDU1NjgsMjAyODEzODM4Ni
-wxMzg2MjE0NjI3LDQ0NTYxNTIzMCwtOTY0MTAwNjAxLDEzNDAw
-MTMxMTEsLTEwMDM1MzM5MTYsODM4NTU3Mjg1LDEwODcxMzgwNj
-ddfQ==
+MTU0NDU0NjE3NjA5NX19LCJoaXN0b3J5IjpbMTk2MzM3NTgwLD
+c3MDk4MzUwMiw5ODI2NDM2NDYsMzM0MTk5NDcwLDE0OTc5NTMy
+OCwtMjEwNzgwNTc4NywtMTI1MTYwNTU2OCwyMDI4MTM4Mzg2LD
+EzODYyMTQ2MjcsNDQ1NjE1MjMwLC05NjQxMDA2MDEsMTM0MDAx
+MzExMSwtMTAwMzUzMzkxNiw4Mzg1NTcyODUsMTA4NzEzODA2N1
+19
 -->
